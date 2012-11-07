@@ -249,13 +249,15 @@ done
 
 set-env PATH /app/.heroku/venv/bin:/bin:/usr/local/bin:/usr/bin
 set-env PYTHONUNBUFFERED true
-set-env LIBRARY_PATH /app/.heroku/vendor/lib
+set-env LIBRARY_PATH /app/.heroku/vendor/lib:/app/.heroku/vendor/lib/atlas-base:/app/.heroku/vendor/lib/atlas-base/atlas
 set-env LD_LIBRARY_PATH /app/.heroku/vendor/lib:/app/.heroku/vendor/lib/atlas-base:/app/.heroku/vendor/lib/atlas-base/atlas
 set-env LANG en_US.UTF-8
 set-env PYTHONHASHSEED random
 set-env PYTHONHOME /app/.heroku/venv/
 set-env PYTHONPATH /app/
-
+set-env BLAS: /app/.heroku/vendor/lib/atlas-base/atlas/libblas.a
+set-env LAPACK: /app/.heroku/vendor/lib/atlas-base/atlas/liblapack.a
+set-env ATLAS: /app/.heroku/vendor/lib/atlas-base/libatlas.a
 
 # ### Fin.
 
